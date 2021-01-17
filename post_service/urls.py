@@ -1,9 +1,10 @@
 from django.urls import path
-
-from mysite.post_service import views
+from .views import PostListView
 
 
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
+    path('', PostListView.as_view(), name='post_list'),
+    # path('login/', views.login),
+    # path('login/validate', views.login_validate)
 ]
